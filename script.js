@@ -171,4 +171,19 @@ function animate(){
 // SMALL ROMANTIC FINAL TOUCH
 // =========================
 
-console.log("❤️ If she said yes, you won her heart ❤️");
+console.log("❤️ If she said yes, you won her heart ❤️");setInterval(() => {
+
+    const heart = document.createElement("div");
+    heart.innerHTML = ["❤️","💖","💜"][Math.floor(Math.random()*3)];
+    heart.classList.add("heart");
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = "20px";
+    heart.style.opacity = "0.7";
+    heart.style.animationDuration = "6s";
+
+    document.getElementById("hearts").appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+
+}, 1200);
